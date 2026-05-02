@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HabitFlow — Daily Habit Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+</head>
+<body>
+
+  <!-- Toast container -->
+  <div id="toast-container"></div>
+
+  <!-- App wrapper -->
+  <div id="app">
+
+    <!-- Header -->
+    <header id="app-header"></header>
+
+    <!-- Main content -->
+    <main id="app-main">
+
+      <!-- Stats panel -->
+      <section id="stats-panel"></section>
+
+      <!-- Tab navigation -->
+      <nav class="tab-nav" id="tab-nav">
+        <button class="tab-btn active" data-tab="today">Today</button>
+        <button class="tab-btn" data-tab="analytics">Analytics</button>
+      </nav>
+
+      <!-- Today view -->
+      <div id="view-today" class="view active">
+        <div id="habit-list"></div>
+        <button class="btn-add-habit" id="btn-add-habit">+ Add Habit</button>
+      </div>
+
+      <!-- Analytics view -->
+      <div id="view-analytics" class="view">
+        <div id="analytics-panel"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Add Habit Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div id="modal-content" class="modal-box"></div>
+  </div>
+
+  <!-- JS — data layer first, then components, then app -->
+  <script src="js/constants.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/statsPanel.js"></script>
+  <script src="js/components/habitCard.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/analytics.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
